@@ -27,8 +27,13 @@ public class HomeWork5 {
             case "*": result = num1 * num2;
                 System.out.println(result);
                 break;
-            case "/": result = num1 / num2;
-                System.out.println(result);
+            case "/":
+                if ( num2 == 0) {
+                    System.out.println("Сори, на ноль не делим.");
+                }
+                else {
+                result = num1 / num2;
+                System.out.println(result);}
                 break;
             default:
                 System.out.println("Please enter correct sign:");
