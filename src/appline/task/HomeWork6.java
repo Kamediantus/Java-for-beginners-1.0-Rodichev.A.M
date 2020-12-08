@@ -12,7 +12,6 @@ public class HomeWork6 {
         String metricType;
         int shortMetric;
         double value;
-        boolean error = false;
         HashMap<String, Double> lengthMetrics = new HashMap<String, Double>();
         lengthMetrics.put("Метр", 1.0);
         lengthMetrics.put("Миля", 0.000621371);
@@ -33,20 +32,19 @@ public class HomeWork6 {
         weightShort.put(2, "Стон");
         weightShort.put(3, "Фунт");
         weightShort.put(4, "Унция");
-        HashMap<String, Double> chosenMetrics = new HashMap<String, Double>();
-        Map<Integer, String> chosenShortMetrics = new HashMap<Integer, String>();
+        HashMap<String, Double> chosenMetrics ;
+        Map<Integer, String> chosenShortMetrics ;
 
 //        1. Пользователю предлагается на выбор ввести массу или расстояние.
-
         do {
             System.out.print("Что будем конвертировать? 1 - массу, 2 - расстояние:");
             metrics = in.nextInt();
             if (metrics != 1 && metrics != 2) {
-                error = true;
+
                 System.out.println("Введите 1 или 2, иначе не заработает.");
-            } else error = false;
+            }
         }
-        while (error);
+        while (metrics != 1 && metrics != 2);
 
         if (metrics == 1) {
             chosenMetrics = weightMetrics;
@@ -68,11 +66,11 @@ public class HomeWork6 {
             }
             shortMetric = in.nextInt();
             if (shortMetric != 1 && shortMetric != 2 && shortMetric != 3 && shortMetric != 4) {
-                error = true;
+
                 System.out.println("Введите 1, 2, 3 или 4, иначе не заработает.");
-            } else error = false;
+            }
         }
-        while (error);
+        while (shortMetric != 1 && shortMetric != 2 && shortMetric != 3 && shortMetric != 4);
         metricType = chosenShortMetrics.get(shortMetric);
         System.out.println(metricType);
 
