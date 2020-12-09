@@ -13,11 +13,11 @@ public class HomeWork7 {
 //        Пользователь вводит размер массива и данные с клавиатуры в массив
         System.out.print("Введите размер массива: ");
         arrayLength = in.nextInt();
-        double [] array = new double[arrayLength];
+        int [] array = new int[arrayLength];
         System.out.println("Загаданные числа находятся в диапазоне от 1 до 100");
         System.out.println("Введите числовые значения элементов массива, после каждого элемента нажмите enter");
         for (int i = 0; i < array.length; i++){
-            array[i] = in.nextDouble();
+            array[i] = in.nextInt();
         }
 
 //        Сравнить элементы массива с заранее заданными константами x, y, z.
