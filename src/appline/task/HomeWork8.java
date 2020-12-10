@@ -11,11 +11,7 @@ public class HomeWork8 {
         int result = 0;
         System.out.print("Введите положительное целое число:");
         num = in.nextInt();
-        for (int i = 1; i <= num; i++){
-            if ((i % 2 )!= 0) {
-                result += i;
-            }
-        }
+        for (int i = 1; i <= num; i+=2) result += i;
         System.out.println("Вар результат: " + result);
     }
 }
